@@ -33,16 +33,14 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpe?g|svg|gif)$/,
-        type: 'asset/resource'
-      }
+        test: /\.(png|jpe?g|svg|gif|webp)$/,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
     new CopyPlugin({
-      patterns: [
-        { from: 'public', to: '', noErrorOnMissing: true },
-      ],
+      patterns: [{ from: 'public', to: '', noErrorOnMissing: true }],
     }),
   ],
 };
