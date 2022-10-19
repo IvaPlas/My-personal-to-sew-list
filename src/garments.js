@@ -15,7 +15,7 @@ import HinterlandDress from './img/HinterlandDress.webp';
 export const garments = [
   {
     name: 'Anthea blouse and dress',
-    link: 'https://www.linkedin.com/in/ivanaplasienkova/',
+    link: 'https://annaallenclothing.com/collections/all-products/products/anthea-blouse-dress-pdf-sewing-pattern-sizes-00-22',
     image: AntheaBlouse,
     alt: 'dress',
     description:
@@ -23,12 +23,14 @@ export const garments = [
   },
   {
     name: 'Pomona pants and shorts',
+    link: 'https://annaallenclothing.com/collections/all-products/products/pomona-pants-shorts',
     image: PomonaShorts,
     alt: 'pants',
     description: 'blethsfgbzda',
   },
   {
     name: 'Persephone pants',
+    link: 'https://annaallenclothing.com/collections/all-products/products/persephone-pants-shorts',
     image: PersephonePants,
     alt: 'pants',
     description: 'blalbalbablablanfnnfsdadga',
