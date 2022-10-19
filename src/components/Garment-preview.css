@@ -1,0 +1,10 @@
+.garment-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10%;
+}
+
+.garment-preview_photo {
+  max-width: 500px;
+}
