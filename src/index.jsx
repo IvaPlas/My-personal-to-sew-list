@@ -9,7 +9,7 @@ import { garments } from './garments';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage garments={garments} />} />
@@ -18,8 +18,12 @@ const App = () => {
           element={<GarmentDetailPage garments={garments} />}
         />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 };
 
-createRoot(document.querySelector('#app')).render(<App />);
+createRoot(document.querySelector('#app')).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+);

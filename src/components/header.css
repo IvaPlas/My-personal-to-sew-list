@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-title {
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(91, 89, 89);
+}
+
+a :hover {
+  font-weight: lighter;
+}
+.welcome {
+  /* color: black; */
+}

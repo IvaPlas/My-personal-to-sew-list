@@ -1,26 +1,25 @@
 import React from 'react';
-import './Garment-preview.css';
+import './garment-preview.css';
 import { Link } from 'react-router-dom';
 import { garments } from '../garments';
 
 const GarmentPreview = () => {
   return (
     <>
-      {garments.map((garment, index) => (
-        <Link to={`/garments/${garment.name}`}>
+      <div className="garment-preview_container">
+        {garments.map((garment, index) => (
           <div key={index} className="garment-preview">
-            <h3 className="garment-preview_name">{garment.name}</h3>
-            <p className=" garment-preview_description">
-              {garment.description}
-            </p>
-            <img
-              className="garment-preview_photo"
-              src={garment.image}
-              alt={garment.name}
-            />
+            <Link to={`/garments/${garment.name}`}>
+              <img
+                className="garment-preview_photo"
+                src={garment.image}
+                alt={garment.name}
+              />{' '}
+              <h4 className="garment-preview_name">{garment.name}</h4>{' '}
+            </Link>
           </div>
-        </Link>
-      ))}
+        ))}
+      </div>
     </>
   );
 };
