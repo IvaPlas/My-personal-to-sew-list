@@ -41,7 +41,6 @@
   .garment-detail_container {
     flex-direction: row;
     flex-wrap: nowrap;
-
     border-radius: 25px;
     font-size: 16px;
   }

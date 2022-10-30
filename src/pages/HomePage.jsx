@@ -6,10 +6,9 @@ const HomePage = ({ garments }) => {
   return (
     <>
       <h4 className="welcome">
-        Welcome and see my most favourite garments I want to sew or I sewed
-        already and get inspire maybe
+        Hi, my name is Iva and this is my sewing with my most favourite garments
+        I want to sew or I sewed already.
       </h4>
-      <Sorting data={garments} />
       <GarmentPreview data={garments} />
     </>
   );
