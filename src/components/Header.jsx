@@ -9,16 +9,15 @@ const Header = () => {
     <>
       <header className="header-container">
         <nav className="logo-title">
-          <Link to="/">
-            <img className="logo" src={Logo} al="sewing machine"></img>
-            <h1 className="main-title">
-              MY SEWING <br /> LOG
+          <Link className="logo" to="/">
+            <img className="logo_icon" src={Logo} al="sewing machine"></img>
+            <h1 className="logo_main-title">
+              MY <br /> SEWING <br /> LOG
             </h1>
           </Link>
         </nav>
         <div className="sorting-nav">
           <Sorting />
-          <div className="about">ABOUT</div>
         </div>
       </header>
     </>
