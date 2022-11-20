@@ -1,10 +1,10 @@
 import React from 'react';
 import './sorting.css';
-import tops from '../assets/clothing-clothes-t-shirt-svgrepo-com.svg';
-import all from '../assets/closet-clothes-furniture-2-svgrepo-com.svg';
-import bottoms from '../assets/clothing-pants-trousers-svgrepo-com.svg';
-import dresses from '../assets/dress-clothing-clothes-svgrepo-com.svg';
-import accessories from '../assets/purse-lady-accessory-svgrepo-com.svg';
+import tops from '../../assets/clothing-clothes-t-shirt-svgrepo-com.svg';
+import all from '../../assets/closet-clothes-furniture-2-svgrepo-com.svg';
+import bottoms from '../../assets/clothing-pants-trousers-svgrepo-com.svg';
+import dresses from '../../assets/dress-clothing-clothes-svgrepo-com.svg';
+import accessories from '../../assets/purse-lady-accessory-svgrepo-com.svg';
 // import { Link, useParams } from 'react-router-dom';
 // import { garments } from '../garments';
 

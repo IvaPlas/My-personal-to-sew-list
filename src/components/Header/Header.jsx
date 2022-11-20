@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
-import Sorting from './Sorting.jsx';
-import Logo from '../assets/sewing-machine.svg';
+import Sorting from '../Sorting/Sorting';
+import Logo from '../../assets/sewing-machine.svg';
 
 const Header = () => {
   return (

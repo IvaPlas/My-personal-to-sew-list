@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import './garment-detail.css';
+import Form from '../Form/Form';
 
 const GarmentDetail = ({ garments }) => {
   const { name } = useParams();
@@ -23,6 +24,7 @@ const GarmentDetail = ({ garments }) => {
               <p className="garment-detail_description">
                 {garment.description}
               </p>
+              <Form />
             </div>
           </div>
         ))}

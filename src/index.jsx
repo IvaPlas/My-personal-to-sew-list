@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import GarmentDetailPage from './pages/GarmentDetailPage';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import './style.css';
 import { garments } from './garments';
 

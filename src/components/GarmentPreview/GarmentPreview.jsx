@@ -1,7 +1,7 @@
 import React from 'react';
 import './garment-preview.css';
 import { Link } from 'react-router-dom';
-import { garments } from '../garments';
+import { garments } from '../../garments';
 
 const GarmentPreview = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import GarmentDetail from '../components/GarmentDetail';
+import GarmentDetail from '../components/GarmentDetail/GarmentDetail';
 
 const GarmentDetailPage = ({ garments }) => {
   return (

@@ -1,0 +1,28 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  margin-left: 100px;
+  max-height: 250px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+select,
+input {
+  width: 40%;
+  max-width: 70%;
+}
+
+textarea {
+  width: 40%;
+  max-width: 400px;
+  max-height: 80px;
+}
