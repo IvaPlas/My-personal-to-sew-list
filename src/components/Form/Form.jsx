@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './form.css';
 import '../../garments.js';
 
@@ -13,51 +13,59 @@ const Form = () => {
     state: '',
   });
 
-  const handleChange = (event) => {
-    event.preventDefault();
+  const handleChange = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
   };
+
+  useEffect(() => {
+    const formData = window.localStorage.getItem('garment-details');
+    console.log(formData);
+    setFormValues(JSON.parse(formData));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('garment-details', JSON.stringify(formValues));
+  });
 
   console.log(formValues);
   return (
-    <form action="registration" onSubmit={handleChange}>
+    <form>
       <label htmlFor="">
         Name of the pattern
         <input
+          name="name"
           value={formValues.name}
           type="text"
-          onChange={(e) => {
-            setFormValues({ ...formValues, name: e.target.value });
-          }}
+          onChange={handleChange}
         />
       </label>
       <label htmlFor="">
         Author of the pattern{' '}
         <input
+          name="author"
           value={formValues.author}
           type="text"
-          onChange={(e) => {
-            setFormValues({ ...formValues, author: e.target.value });
-          }}
+          onChange={handleChange}
         />
       </label>
       <label htmlFor="">
         Desctiption of the garment/pattern{' '}
         <textarea
+          name="description"
           value={formValues.description}
           type="textarea"
-          onChange={(e) => {
-            setFormValues({ ...formValues, description: e.target.value });
-          }}
+          onChange={handleChange}
         />
       </label>
       <label htmlFor="">
         Measurements
         <input
+          name="measurements"
           value={formValues.measurements}
           type="text"
-          onChange={(e) => {
-            setFormValues({ ...formValues, measurements: e.target.value });
-          }}
+          onChange={handleChange}
         />
       </label>
       <label htmlFor="">
@@ -66,9 +74,7 @@ const Form = () => {
           type="text"
           name="fabric"
           value={formValues.fabric}
-          onChange={(e) => {
-            setFormValues({ ...formValues, fabric: e.target.value });
-          }}
+          onChange={handleChange}
         >
           <option value="canvas">Canvas</option>
           <option value="cotton">Cotton</option>
@@ -94,9 +100,7 @@ const Form = () => {
           type="text"
           name="notes"
           value={formValues.notes}
-          onChange={(e) => {
-            setFormValues({ ...formValues, notes: e.target.value });
-          }}
+          onChange={handleChange}
         />
       </label>
       <label htmlFor="">
@@ -105,9 +109,7 @@ const Form = () => {
           name="state"
           value={formValues.state}
           id=""
-          onChange={(e) => {
-            setFormValues({ ...formValues, state: e.target.value });
-          }}
+          onChange={handleChange}
         >
           <option value="dreaming_of">dreaming-of</option>
           <option value="pattern_printed">pattern printed</option>

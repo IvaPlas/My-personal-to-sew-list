@@ -17,14 +17,14 @@ const GarmentDetail = ({ garments }) => {
               src={garment.image}
               alt={garment.name}
             />
-            <div classname="garment-detail_details">
+            <div className="garment-detail_details">
               <a href={garment.link} target="_blank">
                 <h3 className="garment-detail_name">{garment.name}</h3>
               </a>
               <p className="garment-detail_description">
                 {garment.description}
               </p>
-              <Form />
+              <Form garment={garment} index={name} />
             </div>
           </div>
         ))}
