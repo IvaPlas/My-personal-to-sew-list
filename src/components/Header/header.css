@@ -71,6 +71,11 @@ a :hover {
 .menu-bar {
   position: absolute;
   top: 40px;
+  right: 40px;
+}
+
+.navigation-bar.hidden {
+  display: none;
 }
 
 @media (min-width: 600px) {
@@ -93,6 +98,9 @@ a :hover {
   }
 
   .about-me {
+    display: none;
+  }
+  .menu-bar {
     display: none;
   }
 }

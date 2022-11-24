@@ -55,7 +55,7 @@
 
 @media (min-width: 800px) {
   .garment-detail_container {
-    margin: 80px 120px;
+    /* margin: 80px 120px; */
   }
   .garment-detail_photo {
     /* max-width: 350px;

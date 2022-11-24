@@ -6,6 +6,7 @@ import GarmentDetailPage from './pages/GarmentDetailPage';
 import Header from './components/Header/Header';
 import './style.css';
 import { garments } from './garments';
+import About from './pages/About';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           path="/garments/:name"
           element={<GarmentDetailPage garments={garments} />}
         />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
   );
