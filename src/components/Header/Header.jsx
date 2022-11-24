@@ -8,6 +8,9 @@ import hamburger from '../../assets/hamburger-menu.svg';
 
 const Header = () => {
   const [hiddenNav, setHiddneNav] = useState(true);
+  const handleNav = () => {
+    setHiddneNav(!hiddenNav);
+  };
 
   return (
     <>
@@ -21,11 +24,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="navigation">
-          <img
-            className="menu-bar"
-            src={hamburger}
-            onClick={() => setHiddneNav(!hiddenNav)}
-          />
+          <img className="menu-bar" src={hamburger} onClick={handleNav} />
           <nav className={(hiddenNav ? 'hidden' : '') + ' navigation-bar'}>
             <Sorting />
             <div className="about">

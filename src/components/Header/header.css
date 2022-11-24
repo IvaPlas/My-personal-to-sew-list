@@ -103,6 +103,9 @@ a :hover {
   .menu-bar {
     display: none;
   }
+  .navigation-bar.hidden {
+    display: flex;
+  }
 }
 
 @media (min-width: 800px) {
