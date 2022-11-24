@@ -3,10 +3,14 @@ import './form.css';
 import '../../garments.js';
 
 const Form = () => {
+  const [garments, setGarments] = useState('');
   const [formValues, setFormValues] = useState({
     name: '',
+    link: '',
     author: '',
+    image: '',
     description: '',
+    category: '',
     measurements: '',
     fabric: '',
     notes: '',
@@ -17,6 +21,25 @@ const Form = () => {
     e.preventDefault();
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
+  };
+
+  const handleAddFormSubmit = (e) => {
+    e.preventDefault();
+    const newGarment = {
+      name: formValues.name,
+      link: formValues.link,
+      author: formValues.author,
+      image: formValues.image,
+      description: formValues.description,
+      category: formValues.category,
+      measurements: formValues.measurements,
+      fabric: formValues.fabric,
+      notes: formValues.notes,
+      state: formValues.state,
+    };
+
+    const newGarments = [...garments, newGarment];
+    setGarments(newGarments);
   };
 
   useEffect(() => {
@@ -31,9 +54,9 @@ const Form = () => {
 
   console.log(formValues);
   return (
-    <form>
+    <form onSubmit={handleAddFormSubmit}>
       <label htmlFor="">
-        Name of the pattern
+        Name of the pattern :
         <input
           name="name"
           value={formValues.name}
@@ -41,8 +64,17 @@ const Form = () => {
           onChange={handleChange}
         />
       </label>
+      Link :
       <label htmlFor="">
-        Author of the pattern{' '}
+        <input
+          type="link"
+          name="link"
+          value={formValues.link}
+          onChange={handleChange}
+        />
+      </label>
+      <label htmlFor="">
+        Author of the pattern :
         <input
           name="author"
           value={formValues.author}
@@ -51,7 +83,17 @@ const Form = () => {
         />
       </label>
       <label htmlFor="">
-        Desctiption of the garment/pattern{' '}
+        {' '}
+        Image :
+        <input
+          type="field"
+          name="image"
+          value={formValues.image}
+          onChange={handleChange}
+        />
+      </label>
+      <label htmlFor="">
+        Desctiption of the garment/pattern :
         <textarea
           name="description"
           value={formValues.description}
@@ -60,7 +102,22 @@ const Form = () => {
         />
       </label>
       <label htmlFor="">
-        Measurements
+        Category :
+        <select
+          type="text"
+          name="category"
+          value={formValues.category}
+          onChange={handleChange}
+        >
+          <option value="all">ALL</option>
+          <option value="tops">TOPS</option>
+          <option value="bottoms">BOTTOMS</option>
+          <option value="dresses">DRESSES</option>
+          <option value="accessories">ACCESSORIES</option>
+        </select>
+      </label>
+      <label htmlFor="">
+        Measurements :
         <input
           name="measurements"
           value={formValues.measurements}
@@ -69,7 +126,7 @@ const Form = () => {
         />
       </label>
       <label htmlFor="">
-        Fabric
+        Fabric :
         <select
           type="text"
           name="fabric"
@@ -95,7 +152,7 @@ const Form = () => {
         </select>
       </label>
       <label htmlFor="">
-        Notes
+        Notes :
         <textarea
           type="text"
           name="notes"
@@ -104,7 +161,7 @@ const Form = () => {
         />
       </label>
       <label htmlFor="">
-        State of creation
+        State of creation :
         <select
           name="state"
           value={formValues.state}
@@ -123,6 +180,7 @@ const Form = () => {
           </option>
           <option value="garment_sewed_already">garment sewed already</option>
         </select>
+        <button type="submit">save my notes</button>
       </label>
     </form>
   );

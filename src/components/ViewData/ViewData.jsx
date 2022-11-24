@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const ViewData = () => {
+  return (
+    <div>
+      <p></p>
+    </div>
+  );
+};
 
-return (
-
-)
-}
-
-export default ViewData
+export default ViewData;

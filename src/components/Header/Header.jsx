@@ -3,21 +3,31 @@ import { Link } from 'react-router-dom';
 import './header.css';
 import Sorting from '../Sorting/Sorting';
 import Logo from '../../assets/sewing-machine.svg';
+import about from '../../assets/user-svgrepo-com (1).svg';
+import hamburger from '../../assets/hamburger-menu.svg';
 
 const Header = () => {
   return (
     <>
       <header className="header-container">
-        <nav className="logo-title">
+        <div className="logo-title">
           <Link className="logo" to="/">
             <img className="logo_icon" src={Logo} al="sewing machine"></img>
             <h1 className="logo_main-title">
               MY <br /> SEWING <br /> LOG
             </h1>
           </Link>
-        </nav>
-        <div className="sorting-nav">
-          <Sorting />
+        </div>
+        <div className="navigation">
+          <img className="menu-bar" src={hamburger} alt="shortened menu" />
+          <nav className="navigation-bar">
+            <Sorting />
+            <div className="about">
+              {' '}
+              <h4 className="about-me">ABOUT ME</h4>
+              <img className="about-logo" src={about} alt="icon about" />
+            </div>
+          </nav>
         </div>
       </header>
     </>

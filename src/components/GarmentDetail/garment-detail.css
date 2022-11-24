@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .garment-detail_container {
   display: flex;
   flex-direction: column;
@@ -11,8 +15,8 @@
 }
 
 .garment-detail_photo {
-  width: 250px;
-  border-radius: 15px 15px 0px 0px;
+  width: 300px;
+  border-radius: 15px;
 }
 
 .garment-detail_details {
@@ -31,10 +35,8 @@
 
 @media (min-width: 375px) {
   .garment-detail_photo {
-    width: 300px;
     margin: auto;
     margin-top: 15px;
-    border-radius: 15px;
   }
 }
 @media (min-width: 600px) {
@@ -45,7 +47,7 @@
     font-size: 16px;
   }
   .garment-detail_photo {
-    max-width: 350px;
+    max-width: 300px;
     margin: 30px 30px;
     border-radius: 25px;
   }
@@ -53,15 +55,11 @@
 
 @media (min-width: 800px) {
   .garment-detail_container {
-    flex-direction: row;
-    flex-wrap: nowrap;
     margin: 80px 120px;
-    border-radius: 25px;
-    font-size: 16px;
   }
   .garment-detail_photo {
-    max-width: 350px;
+    /* max-width: 350px;
     margin: 30px 30px;
-    border-radius: 25px;
+    border-radius: 25px; */
   }
 }
