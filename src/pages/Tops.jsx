@@ -1,30 +1,31 @@
-import React from "react";
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import '../components/GarmentPreview/garment-preview.css';
+import { Link } from 'react-router-dom';
+import { garments } from '../garments';
 
-import { useParams } from "react-router-dom";
-import GarmentPreview from "../components/GarmentPreview";
-
-const Tops =({garments}) => {
+const Tops = ({ garments }) => {
   const { category } = useParams();
-
   return (
-    // {garments
-    //   .filter((garment) => (garment.category === category))
-    //   .map((garment, index)=>(<GarmentPreview key={index} garments={garments}/>))}
+    <>
+      <div className="garment-preview_container">
+        {garments
+          .filter((garment) => garment.category === category)
+          .map((garment, index) => (
+            <div key={index} className="garment-preview">
+              <Link to={`/garments/${garment.name}`}>
+                <img
+                  className="garment-preview_photo"
+                  src={garment.image}
+                  alt={garment.name}
+                />{' '}
+                <h4 className="garment-preview_name">{garment.name}</h4>{' '}
+              </Link>
+            </div>
+          ))}
+      </div>
+    </>
+  );
+};
 
-    {garments
-      .filter((garment) => (garment.category === category))
-      .map((garment, index)=>(
-        {garments.map((garment, index) => (
-          <div key={index} className="garment-preview">
-            <Link to={`/garments/${garment.name}`}>
-              <h3 className="garment-preview_name">{garment.name}</h3>{' '}
-            </Link>
-            <img
-              className="garment-preview_photo"
-              src={garment.image}
-              alt={garment.name}
-            />
-          </div>
-      </>))}
-    );
-}
+export default Tops;

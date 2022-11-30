@@ -31,24 +31,41 @@ a :hover {
   cursor: pointer;
 }
 
-.about-me {
+.nav-personal {
+  display: flex;
+  flex-direction: column;
+}
+
+.about_title,
+.new-project_title {
   margin-top: 1px;
   margin-bottom: 2px;
 }
 
-.about-me:hover,
-.about-me:focus {
+.about_title:hover,
+.about_title:focus,
+.new-project_title:hover,
+.new-project_titlet:focus {
   font-weight: lighter;
 }
 
-.about {
+.about_page,
+.new-project_page {
   display: flex;
+  flex-direction: column;
   justify-content: start;
-  margin: 4px;
+  align-items: center;
   font-size: 0.7rem;
   cursor: pointer;
 }
-.about-logo {
+.about_page {
+  margin: 4px;
+}
+.new-project_page {
+  margin: 2px;
+}
+.about_icon,
+.new-project_icon {
   display: none;
 }
 .navigation {
@@ -78,7 +95,7 @@ a :hover {
   display: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 630px) {
   .navigation {
     flex-direction: row;
   }
@@ -91,13 +108,24 @@ a :hover {
     margin-top: 40px;
     gap: 15px;
   }
-  .about-logo {
-    width: 40px;
-    display: block;
-    margin: 4px 10px;
+
+  .nav-personal {
+    flex-direction: row;
+    align-items: baseline;
   }
 
-  .about-me {
+  .about_icon,
+  .new-project_icon {
+    width: 40px;
+    display: block;
+    margin: 4px 4px;
+  }
+  .new-project_icon {
+    width: 30px;
+  }
+
+  .about_title,
+  .new-project_title {
     display: none;
   }
   .menu-bar {
@@ -108,7 +136,7 @@ a :hover {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 880px) {
   .navigation {
     flex-direction: row;
   }
@@ -119,19 +147,16 @@ a :hover {
     box-shadow: none;
     gap: 50px;
   }
+  .nav-personal {
+    gap: 15px;
+  }
 }
 
 @media (min-width: 1200px) {
   .navigation {
     flex-direction: row;
   }
-  /* .sorting-nav {
-    max-width: 650px;
-  } */
-  .about-logo {
-    width: 40px;
-    display: block;
-  }
+
   .navigation-bar {
     flex-direction: row;
     border-style: none;
@@ -139,7 +164,13 @@ a :hover {
     box-shadow: none;
     gap: 80px;
   }
-  .about-me {
+
+  .about_title,
+  .new-project_title {
     display: inline;
+    justify-content: center;
+  }
+  .nav-personal {
+    gap: 15px;
   }
 }

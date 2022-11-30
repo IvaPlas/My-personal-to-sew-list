@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './form.css';
+import './new-project.css';
 import { garments } from '../../garments';
 
-const Form = () => {
+const NewProject = () => {
   const [garments, setGarments] = useState('');
   const [formValues, setFormValues] = useState({
     name: '',
@@ -93,7 +93,7 @@ const Form = () => {
         />
       </label>
       <label htmlFor="">
-        Desctiption of the garment/pattern :
+        Desctiption / Notes:
         <textarea
           name="description"
           value={formValues.description}
@@ -121,7 +121,7 @@ const Form = () => {
         <input
           name="measurements"
           value={formValues.measurements}
-          type="text"
+          type="textarea"
           onChange={handleChange}
         />
       </label>
@@ -152,15 +152,6 @@ const Form = () => {
         </select>
       </label>
       <label htmlFor="">
-        Notes :
-        <textarea
-          type="text"
-          name="notes"
-          value={formValues.notes}
-          onChange={handleChange}
-        />
-      </label>
-      <label htmlFor="">
         State of creation :
         <select
           name="state"
@@ -179,11 +170,10 @@ const Form = () => {
             sewing masterpiece in progress
           </option>
           <option value="garment_sewed_already">garment sewed already</option>
-          <progress value={63} max={100}></progress>
         </select>
-        <button type="submit">save my notes</button>
+        <button type="submit">save garment</button>
       </label>
     </form>
   );
 };
-export default Form;
+export default NewProject;

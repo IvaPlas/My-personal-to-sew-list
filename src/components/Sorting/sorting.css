@@ -16,6 +16,7 @@
 .sorting-tag {
   display: flex;
   justify-content: center;
+
   cursor: pointer;
   width: 33%;
 }
@@ -29,7 +30,7 @@
   font-weight: lighter;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 630px) {
   .sorting {
     width: auto;
     max-width: 700px;
@@ -47,29 +48,27 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 880px) {
   .sorting {
-    max-width: 700px;
     flex-direction: row;
+    gap: 4px;
   }
   .sorting-tag {
     border: 2px solid white;
     border-radius: 5px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
-    margin: 4px;
   }
   .icon {
     margin: 4px 15px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .sorting {
     flex-direction: row;
+    width: 600px;
   }
-  .sorting-tag {
-    margin: 4px;
-  }
+
   .sorting-tag_name {
     display: inline;
     font-size: 0.7rem;

@@ -7,6 +7,8 @@ import Header from './components/Header/Header';
 import './style.css';
 import { garments } from './garments';
 import About from './pages/About';
+import Tops from './pages/Tops';
+import NewProject from './pages/NewProject/NewProject';
 
 const App = () => {
   return (
@@ -18,7 +20,13 @@ const App = () => {
           path="/garments/:name"
           element={<GarmentDetailPage garments={garments} />}
         />
+        <Route path="/newProject" element={<NewProject />} />
+
         <Route path="/about" element={<About />} />
+        <Route
+          path="/tops/garments/:category"
+          element={<Tops garments={garments} />}
+        />
       </Routes>
     </>
   );
